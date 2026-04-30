@@ -1,5 +1,5 @@
 CMakeFiles/MyProject.dir/main.cpp.o: \
-  /Users/aaangelsime/Projects/repos/Learning/computer-science/cpp/sfml/001/main.cpp \
+  /Users/aaangelsime/Projects/repos/Learning/computer-science/cpp/sfml/Ping/main.cpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
   /opt/homebrew/include/SFML/Graphics/Export.hpp \
