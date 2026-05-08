@@ -1,8 +1,8 @@
-#include <paddle.h>
+#include "paddle.h"
 
 Paddle::Paddle(float x, float y) : speed(1000.f), velocity(0.f)
 {
-    shape.setSize([15.f, 100.f]);
+    shape.setSize({15.f, 100.f});
     shape.setFillColor(sf::Color::White);
     shape.setPosition(x, y);
 }

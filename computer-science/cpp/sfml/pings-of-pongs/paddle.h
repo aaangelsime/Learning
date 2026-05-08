@@ -17,5 +17,4 @@ class Paddle
         sf::RectangleShape shape;
         float speed;
         float velocity;
-
-}
+};
