@@ -35,15 +35,15 @@ int main()
     text_two.setFillColor(sf::Color::White);
     text_two.setPosition(350.f, 110.f);
 
-    // pong chars
-    sf::CircleShape pong(20.f);
-    pong.setFillColor(sf::Color::White);
-    pong.setPosition(490.f, 500.f);
+    // // pong chars
+    // sf::CircleShape pong(20.f);
+    // pong.setFillColor(sf::Color::White);
+    // pong.setPosition(490.f, 500.f);
 
-    // left paddle
-    sf::RectangleShape paddle_one(sf::Vector2f(15.f, 100.f));
-    paddle_one.setFillColor(sf::Color::White);
-    paddle_one.setPosition(100.f, 500.f);
+    // // left paddle
+    // sf::RectangleShape paddle_one(sf::Vector2f(15.f, 100.f));
+    // paddle_one.setFillColor(sf::Color::White);
+    // paddle_one.setPosition(100.f, 500.f);
 
     // right paddle
     sf::RectangleShape paddle_two(sf::Vector2f(15.f, 100.f));
@@ -86,10 +86,12 @@ int main()
         window.clear();
         window.draw(text_one);
         window.draw(text_two);
-        window.draw(pong);
-        window.draw(paddle_one);
+        // window.draw(pong);
+        // window.draw(paddle_one);
         window.draw(paddle_two);
         window.display();
+
+
 
     }
 
