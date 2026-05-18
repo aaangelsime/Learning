@@ -26,6 +26,17 @@ void Paddle::draw(sf::RenderWindow& window)
     window.draw(shape);
 }
 
+void Paddle::north_bounce()
+{
+    velocity = -velocity;
+}
+
+//FIXME; setting up reset for after a score has been made
+void Paddle::reset()
+{
+    shape.setPosition();
+}
+
 sf::FloatRect Paddle::get_bounds() const
 {
     return shape.getGlobalBounds();

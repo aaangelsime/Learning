@@ -47,29 +47,41 @@ void Game::update(float dt)
 
 void Game::check_collision()
 {
-    auto pos = ball.get_bounds();
-    
+    auto ball_pos = ball.get_bounds();
+    sf::FloatRect one_pos = player_one.get_bounds();
+    sf::FloatRect two_pos = player_two.get_bounds();
     // ball collision
-    if (pos.top <= 0 || pos.top + pos.height >= 1000.f)
+
+    /*
+    "object".top is the y cord of the objects top edge. 
+    */
+    if (ball_pos.top <= 0 || ball_pos.top + ball_pos.height >= 1000.f)
     {
         ball.bounce_y();
     }
 
-    // paddle collision
+    // paddle collision with the ball
     if (ball.get_bounds().intersects(player_one.get_bounds()) ||
         ball.get_bounds().intersects(player_two.get_bounds()))
     {
         ball.bounce_x();
     }
 
+    // paddle collision with the bounds
+    // FIXME; paddle collision is still not working
+    if (one_pos.top <= 0 || one_pos.top + one_pos.height >= 1000)
+    {
+        player_one.north_bounce();
+    }
+
     // score
-    if (pos.left <= 0)
+    if (ball_pos.left <= 0)
     {
         score_two++; 
         ball.reset();
     }
 
-    if (pos.left + pos.width >= 1000.f)
+    if (ball_pos.left + ball_pos.width >= 1000.f)
     {
         score_one++;
         ball.reset();
