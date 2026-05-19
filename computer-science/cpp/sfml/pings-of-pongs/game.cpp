@@ -79,14 +79,17 @@ void Game::check_collision()
     {
         score_two++; 
         ball.reset();
+        player_one.reset(100.f, 500.f);
+        player_two.reset(900.f, 500.f);
     }
 
     if (ball_pos.left + ball_pos.width >= 1000.f)
     {
         score_one++;
         ball.reset();
+        player_one.reset(100.f, 500.f);
+        player_two.reset(900.f, 500.f);
     }
-
 }
 
 void Game::render()

@@ -31,10 +31,9 @@ void Paddle::north_bounce()
     velocity = -velocity;
 }
 
-//FIXME; setting up reset for after a score has been made
-void Paddle::reset()
+void Paddle::reset(float x, float y)
 {
-    shape.setPosition();
+    shape.setPosition(x, y);
 }
 
 sf::FloatRect Paddle::get_bounds() const

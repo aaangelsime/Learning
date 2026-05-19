@@ -11,7 +11,7 @@ class Paddle
         void draw(sf::RenderWindow& window);
         void north_bounce();
         void south_bounce();
-        void reset();
+        void reset(float x, float y);
         sf::FloatRect get_bounds() const;
 
 
