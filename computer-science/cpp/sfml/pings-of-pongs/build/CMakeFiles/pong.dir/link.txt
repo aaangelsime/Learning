@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/pong.dir/link.d CMakeFiles/pong.dir/main.cpp.o CMakeFiles/pong.dir/game.cpp.o CMakeFiles/pong.dir/ball.cpp.o CMakeFiles/pong.dir/paddle.cpp.o -o pong  /usr/lib64/libsfml-graphics.so.2.6.2 /usr/lib64/libsfml-window.so.2.6.2 /usr/lib64/libsfml-system.so.2.6.2

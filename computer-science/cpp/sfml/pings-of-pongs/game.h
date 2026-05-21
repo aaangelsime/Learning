@@ -14,6 +14,10 @@ class Game
 
     private:
 
+        sf::Font font;
+        sf::Text main_intro;
+        sf::Text main_space;
+
         void handle_events();
         void update(float dt);
         void render();

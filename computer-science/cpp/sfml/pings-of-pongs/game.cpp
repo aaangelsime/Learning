@@ -7,7 +7,25 @@ Game::Game()
       player_two(900.f, 500.f),
       ball(490.f, 500.f, 20.f),
       score_one(0), score_two(0)
-    {}
+    {
+        font.loadFromFile("Ubuntu-B.tff");
+
+        main_intro.setString("Welcome to Pong");
+        main_intro.setFont(font);
+        main_intro.setCharacterSize(80);
+        main_intro.setFillColor(sf::Color::White);
+        sf::FloatRect b1 = main_intro.getLocalBounds();
+        main_intro.setOrigin(b1.width / 2.f, b1.height / 2.f);  // anchor to center
+        main_intro.setPosition(500.f, 200.f);                     // now truly centered
+
+        main_space.setString("To start press SPACE");
+        main_space.setFont(font);
+        main_space.setCharacterSize(30);
+        main_space.setFillColor(sf::Color::White);
+        sf::FloatRect b2 = main_space.getLocalBounds();
+        main_space.setOrigin(b2.width / 2.f, b2.height / 2.f);
+        main_space.setPosition(500.f, 320.f);
+    }
 
 void Game::run()
 {
@@ -109,9 +127,19 @@ void Game::check_collision()
 void Game::render()
 {
     window.clear();
+
+    if (state == Game_State::Menu)
+    {
+        window.draw(main_intro);
+        window.draw(main_space);
+    }
+    else
+    {
     player_one.draw(window);
     player_two.draw(window);
     ball.draw(window);
+    }
+
     window.display();
 }
 
