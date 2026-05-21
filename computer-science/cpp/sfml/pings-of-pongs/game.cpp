@@ -67,11 +67,25 @@ void Game::check_collision()
         ball.bounce_x();
     }
 
-    // paddle collision with the bounds
-    // FIXME; paddle collision is still not working
-    if (one_pos.top <= 0 || one_pos.top + one_pos.height >= 1000)
+    // paddle 1 collision with the bounds
+    if (one_pos.top <= 0)
     {
-        player_one.north_bounce();
+        // (initial x position, y top bound + 75)
+        player_one.reset(100.f, 75.f);
+    }
+    if (one_pos.top >= 1000)
+    {
+        player_one.reset(100.f, 900.f);
+    }
+
+    // paddle 2 collision with the bounds
+    if (two_pos.top <= 0)
+    {
+        player_two.reset(900.f, 75.f);
+    }
+    if (two_pos.top >= 1000)
+    {
+        player_two.reset(900.f, 900.f);
     }
 
     // score
