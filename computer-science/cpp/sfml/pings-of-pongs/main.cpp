@@ -4,7 +4,7 @@
 */
 
 /*
-To compile and run g++ main.cpp game.cpp ball.cpp paddle.cpp -o pong -lsfml-graphics -lsfml-window -lsfml-system
+cmake --build build && ./build/pong
 */
 #include "game.h"
 

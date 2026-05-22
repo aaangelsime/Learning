@@ -17,6 +17,8 @@ class Game
         sf::Font font;
         sf::Text main_intro;
         sf::Text main_space;
+        sf::Text player_one_score;
+        sf::Text player_two_score;
 
         void handle_events();
         void update(float dt);
